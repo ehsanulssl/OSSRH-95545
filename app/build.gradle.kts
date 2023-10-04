@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sslwireless.plugin_development"
+    namespace = "com.ssl.plugin_development"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sslwireless.plugin_development"
+        applicationId = "com.ssl.plugin_development"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -60,11 +60,12 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-    androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.ui.test.junit4)
-    debugImplementation(libs.ui.tooling)
-    debugImplementation(libs.ui.test.manifest)
+
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
+
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.gson)
+    implementation(libs.androidx.localbroadcastmanager)
+    implementation(libs.androidx.swiperefreshlayout)
 }
