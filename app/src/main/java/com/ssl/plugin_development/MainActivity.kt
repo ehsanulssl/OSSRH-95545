@@ -24,7 +24,6 @@ import com.sslwireless.sslcommerzlibrary.view.singleton.IntegrateSSLCommerz
 import com.sslwireless.sslcommerzlibrary.viewmodel.listener.SSLCTransactionResponseListener
 
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
